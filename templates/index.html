@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Attrition Prediction</title>
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header id="header">
+      <div class="container">
+        <h1 class="header-title">Employee Attrition Prediction</h1>
+        <p class="header-description">
+          Predict whether an employee is likely to leave the company using data-driven insights to improve retention strategies.
+        </p>
+      </div>
+    </header>
+
+    <!-- How It Works Section (Text Removed) -->
+    <section id="how-it-works" class="container">
+      <h2 class="section-title">How It Works</h2>
+      <div class="steps-container">
+        <div class="step-card">
+          <h3 class="step-title">Enter Employee Data</h3>
+          <p class="step-description">
+            Provide basic information about the employee such as age, job satisfaction, years at company, etc.
+          </p>
+        </div>
+        <div class="step-card">
+          <h3 class="step-title">Model Prediction</h3>
+          <p class="step-description">
+            After submitting the data, the model will analyze the inputs and make a prediction about employee attrition.
+          </p>
+        </div>
+        <div class="step-card">
+          <h3 class="step-title">See Results</h3>
+          <p class="step-description">
+            The result will be shown in a modal, indicating whether the employee is likely to stay or leave.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prediction Form Section -->
+    <section id="prediction-form" class="container">
+      <form id="predictionForm" class="form">
+        <h2 class="form-heading">Make a Prediction</h2>
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" placeholder="Enter age (e.g., 30)" required />
+        </div>
+        <div class="form-group">
+          <label for="jobSatisfaction">Job Satisfaction:</label>
+          <select id="jobSatisfaction" name="jobSatisfaction" required>
+            <option value="">Select satisfaction level</option>
+            <option value="1">1 - Low</option>
+            <option value="2">2 - Medium</option>
+            <option value="3">3 - High</option>
+            <option value="4">4 - Very High</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="yearsAtCompany">Years at Company:</label>
+          <input type="number" id="yearsAtCompany" name="yearsAtCompany" placeholder="Enter years worked" required />
+        </div>
+        <div class="form-group">
+          <label for="jobLevel">Job Level:</label>
+          <input type="number" id="jobLevel" name="jobLevel" placeholder="Enter job level (e.g., 3)" required />
+        </div>
+        <div class="form-group">
+          <label for="monthlyIncome">Monthly Income:</label>
+          <input type="number" id="monthlyIncome" name="monthlyIncome" placeholder="Enter monthly income" required />
+        </div>
+        <div class="form-group">
+          <label for="totalWorkingYears">Total Working Years:</label>
+          <input type="number" id="totalWorkingYears" name="totalWorkingYears" placeholder="Enter total years" required />
+        </div>
+        <div class="form-group">
+          <label for="yearsSinceLastPromotion">Years Since Last Promotion:</label>
+          <input type="number" id="yearsSinceLastPromotion" name="yearsSinceLastPromotion" placeholder="Enter years since last promotion" required />
+        </div>
+        <div class="form-group">
+          <label for="overtime">Overtime:</label>
+          <select id="overtime" name="overtime" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-submit">Predict</button>
+      </form>
+    </section>
+
+    <!-- Result Modal -->
+    <div id="resultModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div id="modalMessage"></div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../static/script.js"></script>
+  </body>
+</html>
